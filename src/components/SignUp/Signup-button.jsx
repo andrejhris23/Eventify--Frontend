@@ -11,7 +11,7 @@ const SignupButton = () => {
         screen_hint: "signup"
     })}
     >
-        Sing Up
+        Sign Up
     </button>
     );
 }
