@@ -1,8 +1,14 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import { UserIdContext } from './contexts/UserIdContext';
 import './App.css';
 
 function App() {
+
+  const [id, setId] = useState(null);
+  const [userToken, setUserToken] = useState(null);
+
   return (
+    <UserIdContext.Provider value={{id, setId, userToken, setUserToken}}>
     <div className="App">
 
         <p>
@@ -10,6 +16,7 @@ function App() {
         </p>
         
     </div>
+    </UserIdContext.Provider>
   );
 }
 
